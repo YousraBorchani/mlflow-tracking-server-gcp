@@ -36,12 +36,12 @@ module "postgresql" {
   database_flags = [{ name = "autovacuum", value = "off" }]
 
   user_labels = {
-    foo = "bar"
+    user = "mlflow"
   }
 
   ip_configuration = {
     ipv4_enabled    = true
-    require_ssl     = true
+    require_ssl     = false
     private_network = null
     authorized_networks = [
       {

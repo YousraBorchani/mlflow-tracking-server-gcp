@@ -1,4 +1,3 @@
-
 variable "k8s_host" {
   type        = string
 }
@@ -21,4 +20,32 @@ variable "metadata_pg_storage" {
 }
 variable "artifacts_storage_url" {
   type = string
+}
+
+variable "heml-release-name" {
+  type = string
+}
+variable "heml-release-repository" {
+  type = string
+}
+variable "heml-release-chart" {
+  type = string
+}
+
+variable "metadata_service" {
+  type = object ({
+    type = string 
+    port = string
+  })
+}
+
+variable "metadata_ingress" {
+  type = object ({
+    enabled = string
+  /*  host = string */
+    path = string
+    serviceNameOverride = string
+    servicePortOverride = string
+   
+  })
 }

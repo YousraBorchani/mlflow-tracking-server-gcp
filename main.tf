@@ -29,8 +29,8 @@ module "gcs" {
 module "postgres" {
     source = "./modules/postgresql_ha"
     region = var.region
-    user_name = var.user_name
-    user_password = var.user_password
+    user_name = var.pg_user_name
+    user_password = var.pg_user_password
     project_id   = var.project_id
     vpc_name = var.vpc_name
     vpc_id = module.gke.vpc.id
@@ -50,13 +50,32 @@ module "mlflow" {
     k8s_host = module.gke.kubernetes_cluster.endpoint
     k8s_cluster_ca_certificate = base64decode(module.gke.kubernetes_cluster.master_auth.0.cluster_ca_certificate)
     k8s_token = data.google_client_config.provider.access_token
+
+    heml-release-name = var.heml-release-name
+    heml-release-repository = var.heml-release-repository
+    heml-release-chart = var.heml-release-chart
+    
     metadata_pg_storage = {
-      username = var.user_name
-      password = var.user_password
+      username = var.pg_user_name
+      password = var.pg_user_password
       host = module.postgres.public_ip_address
-      port = "5432"
-      database = "tf-pg-ha"
+      port =  var.pg_port
+      database = var.pg_database
     }
     artifacts_storage_url = module.gcs.url
 
+
+    metadata_service = {
+      type =  var.service_type
+      port =  var.service_port
+    }
+
+    metadata_ingress = {
+      enabled = var.ingress_enabled
+    # host = module.gke.kubernetes_cluster.endpoint
+      path =  var.ingress_path
+      serviceNameOverride = "mlflow-release"
+      servicePortOverride = var.service_port
+      
+    }
 }

@@ -4,6 +4,10 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+*.lock.*
+
+# Ignore generated URL
+https:*
 
 # Crash log files
 crash.log
