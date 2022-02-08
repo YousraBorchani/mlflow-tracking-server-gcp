@@ -3,5 +3,3 @@ output "kubernetes_cluster" {
     k8s_host = module.gke.kubernetes_cluster.endpoint
   }
 }
-
-

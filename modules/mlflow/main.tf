@@ -7,7 +7,6 @@ provider "helm" {
  }
 }
 
-
 resource "helm_release" "mlflow" {
   name       =  var.heml-release-name
   repository =  var.heml-release-repository
@@ -54,11 +53,6 @@ resource "helm_release" "mlflow" {
     value = var.metadata_ingress.enabled
   }
 
- /* set {
-    name = "ingress.hosts[0].host"
-    value = var.metadata_ingress.host
-  }  */
-
   set {
     name = "ingress.hosts[0].paths[0].path"
     value = var.metadata_ingress.path
@@ -74,3 +68,8 @@ resource "helm_release" "mlflow" {
   }
       
 }
+
+
+
+
+

@@ -42,7 +42,6 @@ variable "metadata_service" {
 variable "metadata_ingress" {
   type = object ({
     enabled = string
-  /*  host = string */
     path = string
     serviceNameOverride = string
     servicePortOverride = string

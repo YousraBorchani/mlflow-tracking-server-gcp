@@ -72,10 +72,12 @@ module "mlflow" {
 
     metadata_ingress = {
       enabled = var.ingress_enabled
-    # host = module.gke.kubernetes_cluster.endpoint
       path =  var.ingress_path
-      serviceNameOverride = "mlflow-release"
+      serviceNameOverride = var.heml-release-name
       servicePortOverride = var.service_port
       
     }
 }
+
+
+
