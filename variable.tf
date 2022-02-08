@@ -44,27 +44,34 @@ variable "subnet_cidr_range" {
 }
 
 variable "heml-release-name" {
+  description = "heml release name"
   type = string
 }
 variable "heml-release-repository" {
+  description = "heml release repository"
   type = string
 }
 variable "heml-release-chart" {
+   description = "heml release chart"
   type = string
 }
 
 variable "service_type" {
+   description = "service type"
   type = string
 }
 
 variable "service_port" {
+   description = "service port"
   type = string
 }
 
 variable "ingress_enabled" {
+   description = "ingress enabled"
   type = string
 }
 
 variable "ingress_path" {
+  description = "ingress path"
   type = string
 }
