@@ -57,19 +57,19 @@ kubectl get ingress mlflow-release -o jsonpath="{.status.loadBalancer.ingress[0]
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_bucket_name_prefix"></a> [bucket\_name\_prefix](#input\_bucket\_name\_prefix) | bucket name prefix | `string` | n/a | yes |
-| <a name="input_heml-release-chart"></a> [heml-release-chart](#input\_heml-release-chart) | n/a | `string` | n/a | yes |
-| <a name="input_heml-release-name"></a> [heml-release-name](#input\_heml-release-name) | n/a | `string` | n/a | yes |
-| <a name="input_heml-release-repository"></a> [heml-release-repository](#input\_heml-release-repository) | n/a | `string` | n/a | yes |
-| <a name="input_ingress_enabled"></a> [ingress\_enabled](#input\_ingress\_enabled) | n/a | `string` | n/a | yes |
-| <a name="input_ingress_path"></a> [ingress\_path](#input\_ingress\_path) | n/a | `string` | n/a | yes |
+| <a name="input_heml-release-chart"></a> [heml-release-chart](#input\_heml-release-chart) | heml release chart | `string` | n/a | yes |
+| <a name="input_heml-release-name"></a> [heml-release-name](#input\_heml-release-name) | heml release name | `string` | n/a | yes |
+| <a name="input_heml-release-repository"></a> [heml-release-repository](#input\_heml-release-repository) | heml release repository | `string` | n/a | yes |
+| <a name="input_ingress_enabled"></a> [ingress\_enabled](#input\_ingress\_enabled) | ingress enabled | `string` | n/a | yes |
+| <a name="input_ingress_path"></a> [ingress\_path](#input\_ingress\_path) | ingress path | `string` | n/a | yes |
 | <a name="input_pg_database"></a> [pg\_database](#input\_pg\_database) | Database name of SQL instance. | `string` | n/a | yes |
 | <a name="input_pg_port"></a> [pg\_port](#input\_pg\_port) | Port of the SQL instance. | `string` | n/a | yes |
 | <a name="input_pg_user_name"></a> [pg\_user\_name](#input\_pg\_user\_name) | user name of the SQL instance. | `string` | n/a | yes |
 | <a name="input_pg_user_password"></a> [pg\_user\_password](#input\_pg\_user\_password) | user password of the SQL instance. | `string` | n/a | yes |
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | project id | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | region | `string` | n/a | yes |
-| <a name="input_service_port"></a> [service\_port](#input\_service\_port) | n/a | `string` | n/a | yes |
-| <a name="input_service_type"></a> [service\_type](#input\_service\_type) | n/a | `string` | n/a | yes |
+| <a name="input_service_port"></a> [service\_port](#input\_service\_port) | service port | `string` | n/a | yes |
+| <a name="input_service_type"></a> [service\_type](#input\_service\_type) | service type | `string` | n/a | yes |
 | <a name="input_subnet_cidr_range"></a> [subnet\_cidr\_range](#input\_subnet\_cidr\_range) | subnet cidr range. | `string` | n/a | yes |
 | <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | VPC name. | `string` | n/a | yes |
 
