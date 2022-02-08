@@ -8,24 +8,26 @@ All the choices are made with the following architecrture rules:
  3. Use managed sever when it's possible.
  4. Portability.
   
-![view architecture here ! ](https://drive.google.com/file/d/1afmQAVEHmQG0Ye4NtXYmvulpXRjSKmF1/view?usp=sharing)
-
-https://drive.google.com/file/d/1afmQAVEHmQG0Ye4NtXYmvulpXRjSKmF1/view?usp=sharing
+![ View architecture here ](https://drive.google.com/file/d/1afmQAVEHmQG0Ye4NtXYmvulpXRjSKmF1/view?usp=sharing)
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 
 
 ## Set up the environment
 
-gcloud auth application-default login 
+`gcloud auth application-default login`
 
 ## Run Terraform 
 
+```
 terraform init
 terraform plan
 terraform apply
 
+```
+
 ## Run kubernetes
 
-kubectl get ingress mlflow-release -o jsonpath="{.status.loadBalancer.ingress[0].ip}"
+`kubectl get ingress mlflow-release -o jsonpath="{.status.loadBalancer.ingress[0].ip}"`
 
 ## Requirements
 
