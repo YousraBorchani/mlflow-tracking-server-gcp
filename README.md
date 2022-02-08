@@ -8,7 +8,7 @@ All the choices are made with the following architecrture rules:
  3. Use managed sever when it's possible.
  4. Portability.
   
-![alt text](https://drive.google.com/file/d/1afmQAVEHmQG0Ye4NtXYmvulpXRjSKmF1/view?usp=sharing)
+![view architecture here ! ](https://drive.google.com/file/d/1afmQAVEHmQG0Ye4NtXYmvulpXRjSKmF1/view?usp=sharing)
 
 
 ## Set up the environment
