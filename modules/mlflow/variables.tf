@@ -32,7 +32,7 @@ variable "heml-release-repository" {
   type = string
 }
 variable "heml-release-chart" {
-   description = "heml release chart"
+  description = "heml release chart"
   type = string
 }
 
