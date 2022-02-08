@@ -1,9 +1,12 @@
 ## MLflow 
 
-To deploy the infrastructure we will use mlflow helm chart to start the tracker server on kubernetes engine GKE. We’ll use Google Cloud SQL as the backend to store experiment metadata and Google Cloud Storage as artifact store.
-All the choices are made to ensure high availability. 
-
-https://drive.google.com/file/d/1vhsZQWsLBJRQSUZRHVrlO5oAVS8_LF21/view?usp=sharing
+To deploy the infrastructure we will use mlflow helm chart to start the tracker server on kubernetes engine GKE. 
+We will use Google Cloud SQL as the backend to store experiment metadata and Google Cloud Storage as artifact store.
+All the choices are made with the following architecrture rules
+    1 Ensure high availability of the plateform. 
+    2 Don't put data inside kubernetes.
+    3 Use managed sever when it's possible.
+    4 Portability.
 
 ## Set up the environment
 
